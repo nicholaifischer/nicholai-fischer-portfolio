@@ -7,6 +7,32 @@
     --container-padding: 40px;
 }
 
+[data-theme="dark"] {
+    --color-bg: #111111;
+    --color-text: #F0F0F2;
+    --color-grid: #333333;
+}
+
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--color-text);
+    color: var(--color-text);
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: var(--font-main);
+    font-size: 10px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+    grid-column: 5 / 6;
+    justify-self: end;
+}
+
+.theme-toggle:hover {
+    opacity: 1;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -96,8 +122,8 @@ body {
     grid-column: 6 / 7;
     justify-self: end;
     text-decoration: none;
-    color: #fff;
-    background: #111;
+    color: var(--color-bg);
+    background: var(--color-text);
     padding: 8px 16px;
     border-radius: 2px;
     transition: transform 0.2s;
