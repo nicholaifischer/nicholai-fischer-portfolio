@@ -4,142 +4,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicholai Fischer - Portfolio</title>
-    <meta name="description" content="Portfolio of Nicholai Fischer. Art direction, design, and photography.">
+    <title>Nicholai Fischer - Product Designer</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/images/hero_new.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Pinyon+Script&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons (using remixicon for lightweight icons) -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div class="grid-overlay">
-        <div class="grid-line"></div>
-        <div class="grid-line"></div>
-        <div class="grid-line"></div>
-        <div class="grid-line"></div>
-        <div class="grid-line"></div>
-        <div class="grid-line"></div>
-    </div>
 
-    <header class="site-header">
-        <div class="header-inner">
-            <div class="logo">FISCHER</div>
-            <nav class="site-nav">
-                <a href="#home">HOME</a>
-                <span class="separator">/</span>
-                <a href="#works">WORKS</a>
-                <span class="separator">/</span>
-                <a href="#about">ABOUT</a>
-            </nav>
-            <a href="#contact" class="btn-contact">CONTACT ↗</a>
-            <button class="theme-toggle">Light/Dark</button>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-badge">
+            <svg viewBox="0 0 100 100" class="rotating-text">
+                <path id="curve" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent" />
+                <text>
+                    <textPath xlink:href="#curve" startOffset="0%">
+                        NEW PROJECTS • OPEN FOR WORK •
+                    </textPath>
+                </text>
+            </svg>
+            <div class="center-icon">NF</div>
+        </div>
+
+        <nav class="main-nav">
+            <a href="#projects">Works</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-right">
+            <span>AVAILABLE FOR WORK</span>
+            <button class="menu-btn"><i class="ri-menu-line"></i></button>
         </div>
     </header>
 
     <main>
-        <section id="home" class="hero-section">
-            <div class="hero-content">
-                <h1 class="hero-title">Fischer<span class="trademark">©</span></h1>
-                <div class="hero-intro">
-                    <span class="label">[INTRO]</span>
-                    <p>Designing unique visual experiences that capture the essence of brands and stories through art
-                        direction, design, and photography.</p>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-top">
+                <div class="hero-image-small">
+                    <!-- Placeholder for small playful image -->
+                    <img src="assets/images/hero_new.png" alt="Abstract shape">
                 </div>
-                <div class="scroll-indicator">Scroll Down</div>
             </div>
-            <div class="hero-image-container">
-                <span class="year-label">/25</span>
-                <div class="hero-image-placeholder">
-                    <img src="assets/images/hero_new.png" alt="Nicholai Fischer Portrait" loading="lazy">
+
+            <h1 class="hero-title">
+                I'm <span class="script-font">Nicholai</span>,<br>
+                a <span class="italic">Product Designer</span><br>
+                based in <span class="italic">Venice</span>
+            </h1>
+
+            <p class="hero-sub">
+                I have 8 years of experience building brands and digital<br>
+                products that define startups and established series.
+            </p>
+        </section>
+
+        <!-- Stats / About Section -->
+        <section class="stats" id="about">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="intro-text">
+                    <p>In short: I turn complex problems into smooth user<br>
+                        experiences, creating visual frameworks and digital<br>
+                        prototypes. I love crafting things that are scalable and<br>
+                        metrics-centric. And I mix all of these things with style.</p>
+
+                    <a href="#about" class="btn-circle">About Is <i class="ri-arrow-right-line"></i></a>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="number">1M<span class="plus">+</span></div>
+                    <div class="label">Users impacted by my<br>proposed solutions</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number">4.9<span class="plus">*</span></div>
+                    <div class="label">Average rating score on all<br>managed projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number">80<span class="plus">%</span></div>
+                    <div class="label">Improvement in conversion rates<br>for previous clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number">99<span class="plus">%</span></div>
+                    <div class="label">Client satisfaction<br>across 50+ projects</div>
                 </div>
             </div>
         </section>
 
-        <section id="works" class="works-section">
-            <div class="section-label">SELECTED WORKS (2023-2025)</div>
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
+            <div class="projects-header">
+                <h2>Drive your project toward<br>excellence with clarity.</h2>
+            </div>
 
-            <div class="works-grid">
-                <a href="project1.html" class="work-item-link">
-                    <article class="work-item">
-                        <div class="work-image">
-                            <img src="assets/images/hero_new.png" alt="Projekt 1" loading="lazy">
-                        </div>
-                        <div class="work-info">
-                            <h3>Projekt 1</h3>
-                            <span>Branding / Art Direction</span>
-                        </div>
-                    </article>
-                </a>
-                <a href="project2.html" class="work-item-link">
-                    <article class="work-item">
-                        <div class="work-image">
-                            <img src="assets/images/hero_new.png" alt="Projekt 2" loading="lazy">
-                        </div>
-                        <div class="work-info">
-                            <h3>Projekt 2</h3>
-                            <span>Editorial Design</span>
-                        </div>
-                    </article>
-                </a>
-                <a href="project3.html" class="work-item-link">
-                    <article class="work-item">
-                        <div class="work-image">
-                            <img src="assets/images/hero_new.png" alt="Projekt 3" loading="lazy">
-                        </div>
-                        <div class="work-info">
-                            <h3>Projekt 3</h3>
-                            <span>Spatial Design</span>
-                        </div>
-                    </article>
-                </a>
-                <a href="project4.html" class="work-item-link">
-                    <article class="work-item">
-                        <div class="work-image">
-                            <img src="assets/images/hero_new.png" alt="Projekt 4" loading="lazy">
-                        </div>
-                        <div class="work-info">
-                            <h3>Projekt 4</h3>
-                            <span>Typography</span>
-                        </div>
-                    </article>
-                </a>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="card-image">
+                        <img src="assets/images/hero_new.png" alt="Project 1">
+                    </div>
+                    <div class="card-meta">
+                        <span>Revolut</span>
+                        <span>Jan 2024 - Brand</span>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="card-image">
+                        <img src="assets/images/hero_new.png" alt="Project 2">
+                    </div>
+                    <div class="card-meta">
+                        <span>Architecture</span>
+                        <span>Oct 2023 - Visual</span>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="card-image">
+                        <img src="assets/images/hero_new.png" alt="Project 3">
+                    </div>
+                    <div class="card-meta">
+                        <span>Cylan</span>
+                        <span>Jun 2023 - Brand</span>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card">
+                    <div class="card-image">
+                        <img src="assets/images/hero_new.png" alt="Project 4">
+                    </div>
+                    <div class="card-meta">
+                        <span>App UI</span>
+                        <span>Jan 2023 - Product</span>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <section id="about" class="about-section">
-            <div class="about-content">
-                <h2 class="section-title">Philosophy</h2>
-                <p class="big-text">Minimalism is not about subtraction for the sake of simplicity. It is about
-                    subtraction for the sake of focus.</p>
-                <div class="about-details">
-                    <p>My approach combines disciplined utility with an expressiveness that allows the content to shine.
-                        Every pixel serves a purpose.</p>
-                </div>
-            </div>
-        </section>
+        <!-- Services Section (Dark) -->
+        <section class="services" id="services">
+            <div class="services-content">
+                <h2>Take complete charge of<br>your compensation<br>strategy.</h2>
 
-        <footer id="contact" class="site-footer">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <span class="label">CONTACT</span>
-                    <a href="mailto:hello@nicholaifischer.com" class="email-link">hello@nicholaifischer.com</a>
-                </div>
-                <div class="footer-col">
-                    <span class="label">SOCIALS</span>
-                    <div class="social-links">
-                        <a href="#">Instagram</a>
-                        <a href="#">LinkedIn</a>
-                        <a href="#">Behance</a>
+                <div class="services-list-container">
+                    <ul class="services-list">
+                        <li>
+                            <span>ALL-IN-ONE BRANDING</span>
+                            <i class="ri-arrow-right-down-line"></i>
+                        </li>
+                        <li>
+                            <span>CREATIVE WEB DESIGN</span>
+                            <i class="ri-corner-right-down-line"></i>
+                        </li>
+                        <li>
+                            <span>MOTION GRAPHICS AND STORYTELLING</span>
+                            <i class="ri-corner-right-down-line"></i>
+                        </li>
+                        <li>
+                            <span>CREATIVE DIRECTION</span>
+                            <i class="ri-corner-right-down-line"></i>
+                        </li>
+                        <li>
+                            <span>NEW 3D DESIGN</span>
+                            <i class="ri-corner-right-down-line"></i>
+                        </li>
+                        <li>
+                            <span>DIGITAL DEVELOPMENT</span>
+                            <i class="ri-corner-right-down-line"></i>
+                        </li>
+                    </ul>
+
+                    <div class="services-image">
+                        <!-- Abstract collage image -->
+                        <img src="assets/images/hero_new.png" alt="Services Abstract">
                     </div>
                 </div>
-                <div class="footer-col copyright">
-                    <span>© 2026 NICHOLAI FISCHER</span>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="testimonial-wrapper">
+                <h2 class="section-label">Trusted by<br>many.</h2>
+                <p class="testimonial-sub">
+                    Hear from people that I've<br>worked with in the past<br>few years.
+                </p>
+
+                <div class="testimonial-card">
+                    <h3>Really loved the<br>Braindaze logo design.<br>Great work!</h3>
+                    <p class="quote-text">"Nicholai is a person who truly cares about his work. Every single detail is
+                        polished and he makes sure everything meets the highest standards. Highly recommended!"</p>
+
+                    <div class="author">
+                        <img src="assets/images/hero_new.png" alt="Client">
+                        <div class="author-info">
+                            <strong>Mark Z.</strong>
+                            <span>CEO, Social Inc</span>
+                        </div>
+                        <i class="ri-double-quotes-r quote-icon"></i>
+                    </div>
                 </div>
             </div>
-        </footer>
+
+            <div class="testimonial-nav">
+                <button class="nav-btn prev"><i class="ri-arrow-left-line"></i></button>
+                <button class="nav-btn next"><i class="ri-arrow-right-line"></i></button>
+            </div>
+        </section>
+
+        <!-- Footer CTA -->
+        <section class="footer-cta">
+            <h2>Every project tells a unique story,<br>thoughtfully designed to blend<br>seamlessly with its
+                surroundings.<br>Are you ready to craft some<br>magic?</h2>
+
+            <a href="#contact" class="btn-circle-dark">Let's talk <i class="ri-arrow-right-line"></i></a>
+        </section>
+
     </main>
+
+    <footer class="main-footer" id="contact">
+        <div class="footer-top">
+            <div class="footer-left">
+                <span>Start a project</span>
+                <a href="mailto:hello@nicholaifischer.com">hello@nicholaifischer.com</a>
+                <p>Based in Venice, available worldwide.</p>
+            </div>
+
+            <div class="footer-center">
+                <a href="#">Twitter <i class="ri-arrow-right-up-line"></i></a>
+                <a href="#">Instagram <i class="ri-arrow-right-up-line"></i></a>
+                <a href="#">Dribbble <i class="ri-arrow-right-up-line"></i></a>
+            </div>
+
+            <div class="footer-right">
+                <div class="col">
+                    <a href="#">Home</a>
+                    <a href="#">Work</a>
+                    <a href="#">About</a>
+                </div>
+                <div class="col">
+                    <a href="#">Styleguide</a>
+                    <a href="#">Licensing</a>
+                    <a href="#">Changelog</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="big-asterisk">*</div>
+            <div class="footer-logo">Nicholai</div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

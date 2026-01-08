@@ -1,38 +1,28 @@
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Portfolio Loaded');
+// Basic script for scroll interactions and responsiveness
 
-    // Smooth scroll for anchor links
+document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 
-    // Theme Toggle
-    const themeToggle = document.querySelector('.theme-toggle');
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-
-    // Check for saved user preference, if any, on load of the website
-    const currentTheme = localStorage.getItem('theme');
-    if (currentTheme == 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-    } else if (currentTheme == 'light') {
-        document.documentElement.setAttribute('data-theme', 'light');
-    } else if (prefersDarkScheme.matches) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-    }
-
-    if (themeToggle) {
-        themeToggle.addEventListener('click', function () {
-            let theme = 'light';
-            if (document.documentElement.getAttribute('data-theme') !== 'dark') {
-                theme = 'dark';
-            }
-            document.documentElement.setAttribute('data-theme', theme);
-            localStorage.setItem('theme', theme);
+    // Mobile Menu Toggle (Basic implementation)
+    const menuBtn = document.querySelector('.menu-btn');
+    // In a real implementation we would have a mobile menu overlay
+    if (menuBtn) {
+        menuBtn.addEventListener('click', () => {
+            alert('Mobile menu clicked - To be implemented: Expand overlay');
         });
     }
+
+    // Floating animation or scroll triggers can be added here
+    console.log('Portfolio Site Loaded');
 });
