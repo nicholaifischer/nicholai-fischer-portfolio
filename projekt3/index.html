@@ -1,63 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html class="dark" lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekt 3 - Fischer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/images/hero_new.png">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#b81430",
+            "background-light": "#f8f6f6",
+            "background-dark": "#000000",
+            "noir-gray": "#1a1a1a",
+            "noir-text": "#F5F5F5",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+        },
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #000000;
+      color: #F5F5F5;
+    }
+
+    .text-huge {
+      font-size: clamp(3rem, 15vw, 6rem);
+      line-height: 0.9;
+      letter-spacing: -0.05em;
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
 </head>
 
-<body>
-    <div class="grid-overlay">
-        <div class="grid-line"></div>
-        <div class="grid-line"></div>
-        <div class="grid-line"></div>
-        <div class="grid-line"></div>
-        <div class="grid-line"></div>
-        <div class="grid-line"></div>
-    </div>
-
-    <header class="site-header">
-        <div class="header-inner">
-            <div class="logo">FISCHER</div>
-            <nav class="site-nav">
-                <a href="index.html#home">HOME</a>
-                <span class="separator">/</span>
-                <a href="index.html#works">WORKS</a>
-                <span class="separator">/</span>
-                <a href="index.html#about">ABOUT</a>
-            </nav>
-            <a href="index.html#contact" class="btn-contact">CONTACT ↗</a>
-            <button class="theme-toggle">Light/Dark</button>
-        </div>
+<body class="bg-background-dark text-noir-text antialiased">
+  <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+    <header class="flex items-center justify-between p-6 bg-background-dark sticky top-0 z-50">
+      <a href="../" class="flex items-center justify-center p-2 rounded hover:bg-noir-gray transition-colors">
+        <span class="material-symbols-outlined text-noir-text">arrow_back</span>
+      </a>
+      <div class="font-bold tracking-tighter text-xl uppercase">Cylan</div>
+      <div class="w-10"></div> <!-- Spacer for symmetry -->
     </header>
-
-    <main>
-        <section class="hero-section" style="min-height: auto; padding-bottom: 60px;">
-            <div class="hero-content" style="grid-column: 1 / 7;">
-                <h1 class="hero-title" style="font-size: 8vw;">Projekt 3</h1>
+    <main class="flex-1">
+      <section class="px-6 pt-12 pb-20 border-b border-noir-gray">
+        <h1 class="text-huge font-extrabold uppercase mb-8">
+          Cylan<br />
+          <span class="text-primary">Strategy</span>
+        </h1>
+        <p class="max-w-md text-lg font-light leading-relaxed text-slate-400">
+          A premium, minimalist approach to redefining brand identity through high-contrast aesthetics and stark
+          geometric structures.
+        </p>
+      </section>
+      <section class="p-6">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-6">Deliverables</h3>
+        <div class="grid grid-cols-1 gap-1">
+          <div
+            class="flex items-center justify-between p-5 border border-noir-gray hover:bg-noir-gray transition-colors group">
+            <div class="flex items-center gap-4">
+              <span
+                class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">edit_square</span>
+              <span class="text-lg font-medium tracking-tight">Visual Identity</span>
             </div>
-        </section>
-
-        <section class="works-section" style="padding-top: 0;">
-            <div class="work-image" style="margin-bottom: 40px;">
-                <img src="assets/images/hero_new.png" alt="Projekt 3"
-                    style="height: 60vh; object-fit: cover; width: 100%;">
+            <span class="material-symbols-outlined text-slate-600">north_east</span>
+          </div>
+          <div
+            class="flex items-center justify-between p-5 border border-noir-gray hover:bg-noir-gray transition-colors group">
+            <div class="flex items-center gap-4">
+              <span
+                class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">ads_click</span>
+              <span class="text-lg font-medium tracking-tight">Brand Strategy</span>
             </div>
-            <div class="about-details">
-                <p>Detailed description of Projekt 3 goes here. This is a placeholder text to demonstrate the project
-                    detail page layout.</p>
-                <br>
-                <a href="index.html" style="color: inherit; text-decoration: underline;">Back to Home</a>
+            <span class="material-symbols-outlined text-slate-600">north_east</span>
+          </div>
+          <div
+            class="flex items-center justify-between p-5 border border-noir-gray hover:bg-noir-gray transition-colors group">
+            <div class="flex items-center gap-4">
+              <span
+                class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">play_circle</span>
+              <span class="text-lg font-medium tracking-tight">Motion Design</span>
             </div>
-        </section>
+            <span class="material-symbols-outlined text-slate-600">north_east</span>
+          </div>
+          <div
+            class="flex items-center justify-between p-5 border border-noir-gray hover:bg-noir-gray transition-colors group">
+            <div class="flex items-center gap-4">
+              <span
+                class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">format_size</span>
+              <span class="text-lg font-medium tracking-tight">Typography System</span>
+            </div>
+            <span class="material-symbols-outlined text-slate-600">north_east</span>
+          </div>
+        </div>
+      </section>
+      <section class="px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-12 bg-noir-gray/30 border-y border-noir-gray">
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-4">The Challenge</h4>
+          <p class="text-base font-light leading-relaxed text-slate-300">
+            In a saturated market of vibrant gradients and soft shadows, Cylan sought to stand out by embracing the
+            void. The objective was to create a visual language that communicates authority through restraint.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-4">The Solution</h4>
+          <p class="text-base font-light leading-relaxed text-slate-300">
+            A rigorous grid system paired with a strict monochromatic palette. Every element serves a functional
+            purpose, stripping away the decorative to reveal the structural core of the brand.
+          </p>
+        </div>
+      </section>
+      <section class="p-6">
+        <div class="aspect-[4/5] w-full bg-noir-gray overflow-hidden">
+          <img class="w-full h-full object-cover grayscale brightness-75 contrast-125"
+            data-alt="Abstract black and white architectural geometric shadows"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCshiwssqRtm_-tK7FQ7KTdgVFwNinLaGoaM9H5i24PsVXLhF-sUHCMvqsDdzPAUfis6cby7JO1WodpV8fxszIERBTEzK9iDmei1hoQvoYiW48O5WMzQVpLGWOga_LHEOM9KdRTYXhLDxeBoxz4U_w5PbDePEqbP90v3viwuGQVuAxW2SAngnDQTyIzGrPjMKKAlkLDsO2tijkwsnnS84WgA2gg7KvzX4xJ_kU1tp-DYMYTNvPsnaOlx4oDyaitwtrTkpcuN0MAEQ" />
+        </div>
+      </section>
     </main>
-    <script src="script.js"></script>
+    <footer class="p-6 pt-24 pb-12 border-t border-noir-gray overflow-hidden">
+      <h2 class="text-huge font-black uppercase text-noir-gray select-none opacity-50">CYLAN</h2>
+      <div class="mt-12 flex flex-col gap-8">
+        <div class="flex justify-between items-end">
+          <div>
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-500 mb-2">Next Project</p>
+            <h3 class="text-3xl font-bold uppercase">Luminal Art</h3>
+          </div>
+          <button class="bg-primary text-white p-4 rounded-full">
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </button>
+        </div>
+        <div
+          class="flex justify-between text-[10px] uppercase tracking-widest text-slate-600 border-t border-noir-gray pt-6">
+          <span>© 2024 Cylan Studio</span>
+          <span>All Rights Reserved</span>
+        </div>
+      </div>
+    </footer>
+  </div>
 </body>
 
 </html>
