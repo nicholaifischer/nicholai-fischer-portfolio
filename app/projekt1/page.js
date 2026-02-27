@@ -3,213 +3,379 @@ import Image from 'next/image';
 
 export default function Projekt1() {
   return (
-    <div className="min-h-screen p-8 bg-[#8a8a8a] text-white relative font-sans">
+    <div className="min-h-screen bg-[#f3f4f6] p-8 font-sans flex items-center justify-center relative">
       <Link
         href="/"
-        className="absolute top-8 left-8 flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-sm hover:shadow-md transition-shadow text-[#1a1a1a] z-50"
+        className="absolute top-8 left-8 flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-sm hover:shadow-md transition-shadow text-[#1a1a1a] z-50 border border-gray-100"
         aria-label="Go Back"
       >
         <i className="ri-arrow-left-line text-xl"></i>
       </Link>
 
-      <div className="max-w-5xl mx-auto flex gap-6 pt-16">
-        {/* Left Column */}
-        <div className="w-[380px] flex flex-col gap-6">
+      {/* MacOS Browser Window Container */}
+      <div className="w-full max-w-[1280px] bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 flex flex-col h-[85vh] min-h-[800px]">
 
-          {/* Meeting Widget */}
-          <div className="bg-[#242426] rounded-[32px] p-6 shadow-xl">
-            <div className="flex justify-between items-start mb-6">
-              <div>
-                <h2 className="text-xl font-medium tracking-tight">Meeting on Friday</h2>
-                <p className="text-[#a0a0a0] text-sm mt-1">25 July, 2025</p>
-              </div>
-              <button className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 text-sm font-medium hover:bg-white/5 transition-colors">
-                Work time <i className="ri-briefcase-4-line"></i>
-              </button>
-            </div>
-
-            <div className="flex items-center gap-3 mb-4">
-              <div className="flex-1 bg-[#2e2e30] rounded-xl flex items-center px-4 py-3 border border-white/5">
-                <i className="ri-time-line text-[#a0a0a0] mr-3"></i>
-                <span className="text-sm font-medium">11:30</span>
-              </div>
-              <i className="ri-arrow-right-line text-[#a0a0a0]"></i>
-              <div className="flex-1 bg-[#2e2e30] rounded-xl flex items-center px-4 py-3 border border-white/5">
-                <span className="text-sm font-medium">12:00</span>
-              </div>
-            </div>
-
-            <div className="bg-[#2e2e30] rounded-xl flex justify-between items-center px-4 py-3 border border-white/5 mb-6">
-              <div className="flex items-center text-[#a0a0a0]">
-                <i className="ri-group-line mr-3"></i>
-                <span className="text-sm">People</span>
-              </div>
-              <i className="ri-add-circle-line text-xl text-white"></i>
-            </div>
-
-            <div className="flex gap-4">
-              <button className="w-12 h-12 bg-[#2e2e30] border border-white/5 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors">
-                <i className="ri-sound-module-line"></i>
-              </button>
-              <button className="flex-1 rounded-full bg-gradient-to-r from-[#d9a4cd] to-[#e48cc6] text-white font-medium shadow-lg hover:opacity-90 transition-opacity">
-                Create A Meeting
-              </button>
-            </div>
+        {/* Browser Top Bar */}
+        <div className="h-12 border-b border-gray-100 flex items-center px-4 relative bg-white">
+          <div className="flex gap-2 w-24">
+            <div className="w-3.5 h-3.5 rounded-full bg-[#ff5f56]"></div>
+            <div className="w-3.5 h-3.5 rounded-full bg-[#ffbd2e]"></div>
+            <div className="w-3.5 h-3.5 rounded-full bg-[#27c93f]"></div>
+          </div>
+          <div className="flex gap-4 text-gray-400">
+            <i className="ri-arrow-left-s-line text-lg cursor-pointer hover:text-gray-600"></i>
+            <i className="ri-arrow-right-s-line text-lg cursor-pointer hover:text-gray-600"></i>
           </div>
 
-          {/* Call Duration Widget */}
-          <div className="bg-[#242426] rounded-[32px] p-6 shadow-xl relative overflow-hidden h-[340px]">
-            <div className="flex justify-between items-start mb-6 z-10 relative">
-              <h2 className="text-lg font-medium tracking-tight">Call duration</h2>
-              <button className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 text-sm font-medium hover:bg-white/5 transition-colors">
-                All stats <i className="ri-arrow-right-line"></i>
-              </button>
-            </div>
-
-            <div className="flex items-end mb-8 z-10 relative">
-              <div className="text-5xl font-semibold tracking-tighter">2387</div>
-              <div className="text-xl text-[#a0a0a0] ml-2 mb-1">min</div>
-            </div>
-
-            {/* Chart Area */}
-            <div className="absolute bottom-6 left-6 right-6 h-32 flex items-end gap-2 justify-between z-10">
-
-              {/* Target Line */}
-              <div className="absolute top-2 w-full border-t border-[#d86bb0]/50 z-0"></div>
-              {/* Target Badge */}
-              <div className="absolute top-0 left-0 -mt-3 bg-[#d86bb0] text-xs font-semibold px-2 py-0.5 rounded-full z-20">
-                387 min
-              </div>
-
-              {/* Bars */}
-              <div className="w-[10%] h-[20%] bg-[#363638] rounded-md custom-stripes opacity-70"></div>
-              <div className="w-[10%] h-[30%] bg-[#363638] rounded-md custom-stripes opacity-70"></div>
-              <div className="w-[10%] h-[45%] bg-[#363638] rounded-md custom-stripes opacity-70"></div>
-              <div className="w-[10%] h-[35%] bg-[#363638] rounded-md custom-stripes opacity-70"></div>
-              <div className="w-[14%] h-full bg-gradient-to-t from-[#8a8a8a] to-white rounded-md shadow-[0_0_15px_rgba(255,255,255,0.3)] z-10 relative"></div>
-              <div className="w-[10%] h-[60%] bg-[#363638] rounded-md custom-stripes opacity-70"></div>
-              <div className="w-[10%] h-[40%] bg-[#363638] rounded-md custom-stripes opacity-70"></div>
-              <div className="w-[10%] h-[15%] bg-[#363638] rounded-md custom-stripes opacity-70"></div>
-            </div>
-
-            {/* Chart Labels */}
-            <div className="absolute bottom-1 left-6 right-6 flex justify-between text-[#808080] text-xs font-medium px-2">
-              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span>
-            </div>
+          <div className="absolute left-1/2 -translate-x-1/2 bg-gray-50 flex items-center justify-center px-12 py-1.5 rounded-md text-sm text-gray-500 max-w-sm w-full font-medium">
+            <i className="ri-lock-line mr-2 text-xs"></i>
+            memonest.com
           </div>
 
+          <div className="ml-auto flex items-center gap-4 text-gray-400">
+            <i className="ri-download-line cursor-pointer hover:text-gray-600"></i>
+            <i className="ri-add-line cursor-pointer hover:text-gray-600"></i>
+            <i className="ri-file-copy-line cursor-pointer hover:text-gray-600"></i>
+          </div>
         </div>
 
-        {/* Right Column (Profiles & Chat) */}
-        <div className="flex-1 flex flex-col gap-6">
-          <div className="bg-[#242426] rounded-[32px] p-8 shadow-xl flex-1 flex flex-col border border-white/5">
-            {/* Header / Adrian Profile */}
-            <div className="flex items-center gap-4 border-b border-white/10 pb-6 mb-6">
-              <div className="relative">
-                <Image src="/assets/avatars/adrian.png" alt="Adrian" width={64} height={64} className="rounded-full bg-peach-300 border-2 border-[#242426]" />
-                <div className="absolute bottom-1 right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-[#242426]"></div>
+        {/* Dashboard Main Grid Layout */}
+        <div className="flex-1 flex overflow-hidden">
+
+          {/* Left Sidebar */}
+          <div className="w-[280px] border-r border-gray-100 p-6 flex flex-col bg-white overflow-y-auto">
+            {/* Logo */}
+            <div className="flex items-center gap-3 font-semibold text-xl mb-8 tracking-tight text-gray-900">
+              <div className="w-8 h-8 bg-gray-900 rounded-md flex items-center justify-center shadow-inner">
+                <div className="w-4 h-4 rounded-sm border-2 border-white"></div>
               </div>
+              Memonest
+            </div>
+
+            {/* Profile */}
+            <div className="flex items-center gap-3 p-2 rounded-xl border border-gray-100 mb-8 cursor-pointer hover:bg-gray-50">
+              <Image src="/assets/avatars/daniel.png" alt="Daniel" width={40} height={40} className="rounded-full bg-gray-200" />
+              <div className="flex-1 min-w-0">
+                <div className="font-semibold text-sm text-gray-900 truncate">Daniel Fetchi</div>
+                <div className="text-xs text-gray-500 truncate">danielfetchi@gmail.co.id</div>
+              </div>
+              <i className="ri-expand-up-down-line text-gray-400"></i>
+            </div>
+
+            {/* Menu Navigation */}
+            <nav className="flex flex-col gap-1 mb-8">
+              <div className="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-gray-100 text-gray-900 font-semibold text-sm">
+                <i className="ri-home-4-line text-lg"></i>
+                Home
+              </div>
+              <div className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 font-medium text-sm hover:bg-gray-50 cursor-pointer">
+                <i className="ri-file-copy-2-line text-lg"></i>
+                All files
+              </div>
+              <div className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 font-medium text-sm hover:bg-gray-50 cursor-pointer mt-2">
+                <i className="ri-lock-2-line text-lg"></i>
+                Private files
+              </div>
+              <div className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 font-medium text-sm hover:bg-gray-50 cursor-pointer">
+                <i className="ri-group-line text-lg"></i>
+                Shared with me
+              </div>
+              <div className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 font-medium text-sm hover:bg-gray-50 cursor-pointer">
+                <i className="ri-delete-bin-7-line text-lg"></i>
+                Deleted files
+              </div>
+            </nav>
+
+            {/* Favorite Folders */}
+            <div className="mb-auto">
+              <div className="text-xs font-semibold text-gray-400 mb-2 px-3 tracking-wider">Favorite Folders</div>
+              <nav className="flex flex-col gap-1">
+                <div className="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 font-semibold text-sm hover:bg-gray-50 cursor-pointer">
+                  <i className="ri-folder-fill text-gray-500 text-lg"></i>
+                  UI Design
+                </div>
+                <div className="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 font-medium text-sm hover:bg-gray-50 cursor-pointer">
+                  <i className="ri-folder-fill text-gray-500 text-lg"></i>
+                  Animation
+                </div>
+                <div className="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 font-medium text-sm hover:bg-gray-50 cursor-pointer">
+                  <i className="ri-folder-fill text-gray-500 text-lg"></i>
+                  Assets
+                </div>
+                <div className="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 font-medium text-sm hover:bg-gray-50 cursor-pointer">
+                  <i className="ri-folder-fill text-gray-500 text-lg"></i>
+                  UI Kit
+                </div>
+              </nav>
+            </div>
+
+            {/* Storage Widget */}
+            <div className="mt-8 bg-[#18181b] rounded-2xl p-4 text-white">
+              <div className="flex justify-between items-center mb-4">
+                <div className="font-medium text-sm">Storage almost full</div>
+                <i className="ri-arrow-right-line text-gray-400 text-sm"></i>
+              </div>
+              <div className="h-1.5 bg-gray-700 rounded-full mb-2 overflow-hidden">
+                <div className="h-full bg-white w-3/4 rounded-full"></div>
+              </div>
+              <div className="text-xs text-gray-400 mb-4">12 GB of 16 GB used</div>
+              <button className="w-full bg-white text-black text-sm font-semibold py-2 rounded-lg hover:bg-gray-100 transition-colors">
+                Upgrade plan
+              </button>
+            </div>
+
+            {/* Bottom Links */}
+            <div className="mt-6 flex flex-col gap-2">
+              <div className="flex items-center gap-3 px-3 py-1.5 text-gray-500 font-medium text-sm hover:text-gray-900 cursor-pointer">
+                <i className="ri-settings-3-line text-lg"></i>
+                Settings
+              </div>
+              <div className="flex items-center gap-3 px-3 py-1.5 text-gray-500 font-medium text-sm hover:text-gray-900 cursor-pointer">
+                <i className="ri-question-answer-line text-lg"></i>
+                Support
+              </div>
+            </div>
+          </div>
+
+          {/* Right Main Content Panel */}
+          <div className="flex-1 bg-white p-10 overflow-y-auto">
+
+            {/* Main Header / Search */}
+            <div className="flex justify-between items-center mb-10">
+              <div className="relative w-96">
+                <i className="ri-search-line absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                <input
+                  type="text"
+                  placeholder="Search here..."
+                  className="w-full pl-11 pr-4 py-2.5 bg-gray-50 border border-gray-100 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-200"
+                />
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-gray-50 cursor-pointer">
+                  <i className="ri-notification-3-line"></i>
+                </div>
+                <button className="bg-gray-900 text-white px-4 py-2.5 rounded-lg text-sm font-semibold flex items-center gap-2 hover:bg-gray-800 transition-colors shadow-sm">
+                  <i className="ri-add-line"></i> Invite members
+                </button>
+              </div>
+            </div>
+
+            {/* Welcome Section */}
+            <div className="flex justify-between items-end mb-8">
               <div>
-                <h3 className="text-xl font-semibold tracking-tight">Adrian Ward</h3>
-                <p className="text-[#a0a0a0] text-sm">@adrianward</p>
+                <h1 className="text-2xl font-bold tracking-tight text-gray-900 mb-1">Welcome back, Daniel Fetchi</h1>
+                <p className="text-gray-500 text-sm">Glad to have you back! Let&apos;s get started.</p>
               </div>
-              <button className="ml-auto flex items-center gap-2 px-5 py-2 rounded-full border border-white/10 text-sm font-medium hover:bg-white/5 transition-colors">
-                Follow <i className="ri-add-line"></i>
-              </button>
-            </div>
-
-            {/* Private Message Task Details */}
-            <div className="flex justify-between items-center mb-6">
-              <h2 className="text-2xl font-semibold tracking-tight">Private Message</h2>
-              <button className="flex items-center text-sm font-medium text-white hover:text-white/80 transition-colors">
-                Others <i className="ri-arrow-right-line ml-1"></i>
-              </button>
-            </div>
-
-            <div className="grid grid-cols-[100px_1fr] gap-4 mb-8 text-sm">
-              <div className="text-[#808080]">Assign</div>
-              <div className="flex items-center gap-2 font-medium">
-                <Image src="/assets/avatars/jane.png" alt="Jane" width={24} height={24} className="rounded-full bg-purple-300" />
-                Jane Davidson
-              </div>
-
-              <div className="text-[#808080]">Date</div>
-              <div className="font-medium text-white">24 March 2023</div>
-
-              <div className="text-[#808080]">Tags</div>
-              <div className="flex gap-2">
-                <span className="bg-[#f2baba] text-[#8c3535] px-2 py-0.5 rounded-md text-xs font-semibold">Design</span>
-                <span className="bg-[#baccf2] text-[#354f8c] px-2 py-0.5 rounded-md text-xs font-semibold">Moodboard</span>
+              <div className="flex gap-3">
+                <button className="px-4 py-2 rounded-lg border border-gray-200 text-sm font-semibold text-gray-700 flex items-center gap-2 hover:bg-gray-50 transition-colors">
+                  <i className="ri-folder-add-line"></i> Create folder
+                </button>
+                <button className="px-4 py-2 rounded-lg border border-gray-200 text-sm font-semibold text-gray-700 flex items-center gap-2 hover:bg-gray-50 transition-colors">
+                  <i className="ri-upload-cloud-2-line"></i> Upload files
+                </button>
               </div>
             </div>
 
-            {/* Chat Input Field */}
-            <div className="bg-[#2a2a2c] rounded-2xl p-4 shadow-inner mb-8 border border-white/5">
-              <div className="flex items-center gap-1 text-[#e0e0e0] opacity-90 mb-6 font-medium">
-                Hello, let&apos;s meet <span className="bg-[#4a4a4d] px-1 rounded mx-1 italic">together</span> |
-              </div>
-              <div className="flex justify-between items-end">
-                <div className="flex bg-white text-black rounded-lg overflow-hidden shadow">
-                  <button className="w-8 h-8 flex items-center justify-center font-bold hover:bg-gray-100">B</button>
-                  <button className="w-8 h-8 flex items-center justify-center italic hover:bg-gray-100">i</button>
-                  <button className="w-8 h-8 flex items-center justify-center underline hover:bg-gray-100">U</button>
-                  <button className="w-8 h-8 flex items-center justify-center hover:bg-gray-100 line-through">S</button>
-                </div>
-                <div className="flex items-center gap-3">
-                  <button className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-[#a0a0a0] hover:bg-white/20"><i className="ri-more-fill"></i></button>
-                  <button className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-[#a0a0a0] hover:bg-white/20"><i className="ri-add-line"></i></button>
-                  <div className="w-[1px] h-6 bg-white/10 mx-1"></div>
-                  <button className="w-10 h-10 rounded-full bg-gradient-to-br from-[#c178db] to-[#ea7ecc] flex items-center justify-center text-white shadow-lg hover:opacity-90">
-                    <i className="ri-send-plane-fill"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Statistics List */}
-            <div className="border-t border-white/10 pt-6 mt-auto">
-              <h3 className="text-lg font-medium mb-6">Statistics of other users</h3>
-              <div className="flex flex-col gap-4">
-                <div className="flex items-center gap-4">
-                  <Image src="/assets/avatars/finn.png" alt="Finn" width={48} height={48} className="rounded-full bg-blue-300" />
-                  <div>
-                    <h4 className="font-semibold text-white">Finn Foste</h4>
-                    <p className="text-sm text-[#a0a0a0]">@finnfoste</p>
+            {/* Folder Section */}
+            <div className="mb-10">
+              <h2 className="text-lg font-bold tracking-tight text-gray-900 mb-4">Folder</h2>
+              <div className="grid grid-cols-4 gap-4">
+                {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
+                  <div key={item} className="border border-gray-200 rounded-xl p-3 flex items-center justify-between hover:border-gray-300 hover:shadow-sm transition-all cursor-pointer">
+                    <div className="flex items-center gap-3 text-sm font-semibold text-gray-800">
+                      <i className="ri-folder-line text-lg text-gray-400"></i>
+                      UI UX Design
+                    </div>
+                    <i className="ri-more-2-fill text-gray-400 hover:text-gray-600"></i>
                   </div>
-                  <button className="ml-auto text-sm font-medium hover:text-white/80 flex items-center">
-                    View <i className="ri-arrow-right-line ml-1"></i>
-                  </button>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <Image src="/assets/avatars/evie.png" alt="Evie" width={48} height={48} className="rounded-full bg-amber-100" />
-                  <div>
-                    <h4 className="font-semibold text-white">Evie Bennet</h4>
-                    <p className="text-sm text-[#a0a0a0]">@eviebennet</p>
-                  </div>
-                  <button className="ml-auto text-sm font-medium hover:text-white/80 flex items-center">
-                    View <i className="ri-arrow-right-line ml-1"></i>
-                  </button>
-                </div>
+                ))}
               </div>
             </div>
+
+            {/* Recent Files Section */}
+            <div className="mb-10">
+              <h2 className="text-lg font-bold tracking-tight text-gray-900 mb-4">Recent files</h2>
+              <div className="grid grid-cols-3 gap-4">
+
+                <div className="flex items-center gap-4 p-4 border border-gray-200 rounded-xl hover:shadow-sm cursor-pointer transition-shadow">
+                  <div className="w-12 h-12 rounded-lg bg-gray-50 border border-gray-100 flex items-center justify-center">
+                    <i className="ri-file-text-line text-xl text-gray-500"></i>
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-semibold text-sm text-gray-900 truncate">Invoice December 2024</div>
+                    <div className="text-xs text-gray-500 mt-0.5">267 KB · .pdf</div>
+                  </div>
+                  <i className="ri-more-2-fill text-gray-400 hover:text-gray-600 self-start"></i>
+                </div>
+
+                <div className="flex items-center gap-4 p-4 border border-gray-200 rounded-xl hover:shadow-sm cursor-pointer transition-shadow">
+                  <div className="w-12 h-12 rounded-lg bg-gray-50 border border-gray-100 flex items-center justify-center">
+                    <i className="ri-image-line text-xl text-gray-500"></i>
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-semibold text-sm text-gray-900 truncate">Farewell Company A</div>
+                    <div className="text-xs text-gray-500 mt-0.5">5 MB · .png</div>
+                  </div>
+                  <i className="ri-more-2-fill text-gray-400 hover:text-gray-600 self-start"></i>
+                </div>
+
+                <div className="flex items-center gap-4 p-4 border border-gray-200 rounded-xl hover:shadow-sm cursor-pointer transition-shadow">
+                  <div className="w-12 h-12 rounded-lg bg-gray-50 border border-gray-100 flex items-center justify-center">
+                    <i className="ri-file-text-line text-xl text-gray-500"></i>
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-semibold text-sm text-gray-900 truncate">QA 1_Fizzy app</div>
+                    <div className="text-xs text-gray-500 mt-0.5">12 MB · .pdf</div>
+                  </div>
+                  <i className="ri-more-2-fill text-gray-400 hover:text-gray-600 self-start"></i>
+                </div>
+
+              </div>
+            </div>
+
+            {/* All Files Table */}
+            <div>
+              <h2 className="text-lg font-bold tracking-tight text-gray-900 mb-4">All files</h2>
+
+              {/* Filters / Search */}
+              <div className="flex justify-between items-center mb-4">
+                <div className="flex gap-2">
+                  <button className="px-4 py-2 rounded-lg bg-gray-50 border border-gray-200 text-sm font-semibold text-gray-700 flex items-center gap-2 hover:bg-gray-100 transition-colors">
+                    <i className="ri-filter-3-line"></i> Filter
+                  </button>
+                  <div className="relative">
+                    <i className="ri-search-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" placeholder="Look up anything..." className="pl-9 pr-4 py-2 border border-gray-200 rounded-lg text-sm w-64 focus:outline-none focus:ring-2 focus:ring-gray-100" />
+                  </div>
+                </div>
+                <div className="w-9 h-9 border border-gray-200 rounded-lg flex items-center justify-center text-gray-500 cursor-pointer hover:bg-gray-50">
+                  <i className="ri-more-2-fill"></i>
+                </div>
+              </div>
+
+              {/* Table Header */}
+              <div className="grid grid-cols-[auto_1fr_1.5fr_1fr] gap-4 py-3 px-4 bg-gray-50 rounded-lg text-xs font-semibold tracking-wide text-gray-500 border border-gray-100 uppercase mb-2">
+                <div className="w-5 flex items-center justify-center">
+                  <div className="w-4 h-4 rounded border border-gray-300"></div>
+                </div>
+                <div className="flex items-center gap-1 cursor-pointer hover:text-gray-700">FILE NAME <i className="ri-expand-up-down-line opacity-50"></i></div>
+                <div className="flex items-center gap-1 cursor-pointer hover:text-gray-700">SHARED BY <i className="ri-expand-up-down-line opacity-50"></i></div>
+                <div className="flex items-center gap-1 cursor-pointer hover:text-gray-700">LAST MODIFIED <i className="ri-expand-up-down-line opacity-50"></i></div>
+              </div>
+
+              {/* Table Rows */}
+              <div className="flex flex-col gap-2">
+
+                {/* Row 1 */}
+                <div className="grid grid-cols-[auto_1fr_1.5fr_1fr] gap-4 py-3 px-4 items-center group hover:bg-gray-50 rounded-lg transition-colors border border-transparent hover:border-gray-100 cursor-pointer">
+                  <div className="w-5 flex items-center justify-center">
+                    <div className="w-4 h-4 rounded border border-gray-300 group-hover:border-gray-400"></div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-gray-50 border border-gray-100 flex items-center justify-center flex-shrink-0 group-hover:bg-white group-hover:border-gray-200">
+                      <i className="ri-file-text-line text-lg text-gray-500"></i>
+                    </div>
+                    <div>
+                      <div className="font-semibold text-sm text-gray-900 truncate">Invoice January 2025</div>
+                      <div className="text-xs text-gray-500">267 KB · .pdf</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Image src="/assets/avatars/adrian.png" alt="Adrian" width={28} height={28} className="rounded-full bg-peach-300 border border-gray-200 flex-shrink-0" />
+                    <div className="flex flex-col truncate">
+                      <span className="font-medium text-sm text-gray-900 truncate">James Whitemore</span>
+                      <span className="text-xs text-gray-500 truncate">jameswith@gmail.co.id</span>
+                    </div>
+                  </div>
+                  <div className="text-sm font-medium text-gray-600 truncate">
+                    11 January 2025
+                  </div>
+                </div>
+
+                {/* Row 2 */}
+                <div className="grid grid-cols-[auto_1fr_1.5fr_1fr] gap-4 py-3 px-4 items-center group hover:bg-gray-50 rounded-lg transition-colors border border-transparent hover:border-gray-100 cursor-pointer">
+                  <div className="w-5 flex items-center justify-center">
+                    <div className="w-4 h-4 rounded border border-gray-300 group-hover:border-gray-400"></div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-gray-50 border border-gray-100 flex items-center justify-center flex-shrink-0 group-hover:bg-white group-hover:border-gray-200">
+                      <i className="ri-image-line text-lg text-gray-500"></i>
+                    </div>
+                    <div>
+                      <div className="font-semibold text-sm text-gray-900 truncate">Design Gathering A</div>
+                      <div className="text-xs text-gray-500">3 MB · .png</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Image src="/assets/avatars/elizabeth.png" alt="Elizabeth" width={28} height={28} className="rounded-full bg-orange-300 border border-gray-200 flex-shrink-0" />
+                    <div className="flex flex-col truncate">
+                      <span className="font-medium text-sm text-gray-900 truncate">Elizabeth Harley</span>
+                      <span className="text-xs text-gray-500 truncate">elizabeth12@gmail.co.id</span>
+                    </div>
+                  </div>
+                  <div className="text-sm font-medium text-gray-600 truncate">
+                    23 October 2024
+                  </div>
+                </div>
+
+                {/* Row 3 */}
+                <div className="grid grid-cols-[auto_1fr_1.5fr_1fr] gap-4 py-3 px-4 items-center group hover:bg-gray-50 rounded-lg transition-colors border border-transparent hover:border-gray-100 cursor-pointer">
+                  <div className="w-5 flex items-center justify-center">
+                    <div className="w-4 h-4 rounded border border-gray-300 group-hover:border-gray-400"></div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-gray-50 border border-gray-100 flex items-center justify-center flex-shrink-0 group-hover:bg-white group-hover:border-gray-200">
+                      <i className="ri-box-3-line text-lg text-gray-500"></i>
+                    </div>
+                    <div>
+                      <div className="font-semibold text-sm text-gray-900 truncate">Fizzy file 2</div>
+                      <div className="text-xs text-gray-500">1.2 GB · .fig</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Image src="/assets/avatars/finn.png" alt="Finn" width={28} height={28} className="rounded-full bg-blue-300 border border-gray-200 flex-shrink-0" />
+                    <div className="flex flex-col truncate">
+                      <span className="font-medium text-sm text-gray-900 truncate">Michael Dawson</span>
+                      <span className="text-xs text-gray-500 truncate">dawsonmich@gmail.co.id</span>
+                    </div>
+                  </div>
+                  <div className="text-sm font-medium text-gray-600 truncate">
+                    21 May 2024
+                  </div>
+                </div>
+
+                {/* Row 4 */}
+                <div className="grid grid-cols-[auto_1fr_1.5fr_1fr] gap-4 py-3 px-4 items-center group hover:bg-gray-50 rounded-lg transition-colors border border-transparent hover:border-gray-100 cursor-pointer">
+                  <div className="w-5 flex items-center justify-center">
+                    <div className="w-4 h-4 rounded border border-gray-300 group-hover:border-gray-400"></div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-gray-50 border border-gray-100 flex items-center justify-center flex-shrink-0 group-hover:bg-white group-hover:border-gray-200">
+                      <i className="ri-file-text-line text-lg text-gray-500"></i>
+                    </div>
+                    <div>
+                      <div className="font-semibold text-sm text-gray-900 truncate">Design Catalog</div>
+                      <div className="text-xs text-gray-500">50 MB · .pdf</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Image src="/assets/avatars/daniel.png" alt="Reynold" width={28} height={28} className="rounded-full bg-gray-200 border border-gray-200 flex-shrink-0" />
+                    <div className="flex flex-col truncate">
+                      <span className="font-medium text-sm text-gray-900 truncate">Reynold Arkhan</span>
+                      <span className="text-xs text-gray-500 truncate">hireynold@gmail.co.id</span>
+                    </div>
+                  </div>
+                  <div className="text-sm font-medium text-gray-600 truncate">
+                    19 April 2024
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
-
-      {/* Required style for the custom stripes in the chart */}
-      <style dangerouslySetInnerHTML={{
-        __html: `
-        .custom-stripes {
-          background-image: repeating-linear-gradient(
-            -45deg,
-            #444446,
-            #444446 6px,
-            #363638 6px,
-            #363638 12px
-          );
-        }
-      `}} />
     </div>
   );
 }
