@@ -1,129 +1,16 @@
-export default function PROJEKT2() {
-  return (
-    <div dangerouslySetInnerHTML={{ __html: `
-    <div
-        class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
-        <!-- Minimalist Header -->
-        <header
-            class="flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50 p-4 justify-between border-b border-primary/10">
-            <div class="flex items-center gap-2">
-                <a href="../"
-                    class="text-slate-900 dark:text-slate-100 hover:text-primary transition-colors duration-200">
-                    <span class="material-symbols-outlined">arrow_back</span>
-                </a>
-            </div>
-            <div class="flex-1 flex justify-center">
-                <span class="serif-font font-bold text-lg tracking-widest uppercase text-primary">AURELIUS</span>
-            </div>
-            <div class="w-10 flex justify-end">
-                <button class="text-slate-900 dark:text-slate-100">
-                    <span class="material-symbols-outlined">more_horiz</span>
-                </button>
-            </div>
-        </header>
-        <main class="flex flex-col">
-            <!-- Hero Section -->
-            <div class="@container w-full">
-                <div class="px-0 @[480px]:px-6 @[480px]:py-8">
-                    <div class="relative bg-cover bg-center flex flex-col justify-end overflow-hidden aspect-[4/5] @[480px]:rounded-xl border border-primary/20 shadow-2xl"
-                        data-alt="Modern minimalist concrete architecture against clear sky"
-                        style='background-image: linear-gradient(to top, rgba(18, 18, 18, 0.9) 0%, rgba(18, 18, 18, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAtZsLpVdVfoGYUUUKXle1QyFg49in5O703EmazwNQExUW4sXUsFkWT6lJI26AoAhUioU65Ukll9-nT-ULotelIsOZg-zfflztR0r0MqDPayqJrB0Bo694ucEcN74trnVnIe5cNYs7wB3-uhLypirDIMFcYD1qAcAAH2zMgTGQJxj_f-uVh3EXCDNfnSGvhuHJ3Vm2ewATpa8UJdh5Xs6zZSbfvuhzxHDrHa4Z5vb_dWM5-wj43hITHpaPYQSI3h_G9XO5VWbSlqQ");'>
-                        <div class="p-8 space-y-2">
-                            <span class="text-primary uppercase tracking-[0.3em] text-xs font-semibold">Case
-                                Study</span>
-                            <h1 class="text-slate-100 serif-font text-4xl font-normal leading-tight italic">Architecture
-                                - Visual Design</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Intro Content -->
-            <section class="px-6 py-12 flex flex-col gap-6 max-w-2xl">
-                <h2 class="text-slate-900 dark:text-slate-100 serif-font text-3xl font-light leading-snug">
-                    A Study in <span class="text-primary italic">Minimalist Form</span> &amp; Raw Texture
-                </h2>
-                <div class="w-12 h-[1px] bg-primary"></div>
-                <p class="text-slate-600 dark:text-slate-400 text-lg font-light leading-relaxed">
-                    This project explores the intersection of raw concrete textures and warm, ambient lighting to create
-                    a sense of timeless sanctuary. Every angle is a dialogue between shadow and light.
-                </p>
-                <div class="flex gap-12 pt-4">
-                    <div class="flex flex-col">
-                        <span class="text-[10px] uppercase tracking-widest text-primary font-bold">Location</span>
-                        <span class="text-sm dark:text-slate-200">Kyoto, JP</span>
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="text-[10px] uppercase tracking-widest text-primary font-bold">Year</span>
-                        <span class="text-sm dark:text-slate-200">2024</span>
-                    </div>
-                </div>
-            </section>
-            <!-- Asymmetrical Masonry Grid -->
-            <section class="px-4 pb-20">
-                <div class="grid grid-cols-2 gap-4 items-start">
-                    <!-- Column 1 -->
-                    <div class="flex flex-col gap-4">
-                        <div class="group relative overflow-hidden rounded-lg border border-primary/10">
-                            <img alt="Architectural details of a concrete stairwell"
-                                class="w-full h-auto object-cover aspect-[3/4]"
-                                data-alt="Monochrome architectural detail of minimalist concrete stairs"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMhukTQLw53dVmZ-iSf78FvmbzxsBpw4AQqOpcRkA6dkqNskm7-J7aCug4X1xj98RhMBl6qiOGlsnhfyuzGVT59jBdkbZJRGe4vqktlSh_0vFWNGOnRPAsON3NUZEJh3sTnHtYz8DjFkB_i2uwv624WgTv4A0XapqJYAohX1zBe1dNRXY_J6pOjsyGvTvtGVUj1kkWfmWFxChOg8SgXTQ7c7vs0ew8gOz-GEhOTpqPlrx-Xmbj422oRcT9A5-ZS0afNFKhNGC2rg" />
-                        </div>
-                        <div class="group relative overflow-hidden rounded-lg border border-primary/10 mt-8">
-                            <img alt="Warm interior lighting in a minimalist room"
-                                class="w-full h-auto object-cover aspect-[1/1]"
-                                data-alt="Interior lighting shining on a raw concrete wall"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0sj5Llcmw5jYVZK-P3urqEHZNQps6bud4ixU69JcsM4y7U6OpujGzZhW5FS3vINWH4ghMmmkLwxqjCrViopgQHHn0C2GlBE0JWanH3KJ0jom_o0E1FHYOwUNhIbcC0gfWDTI0RSuX_IeJav7sdOMvn_-52wn-ShIYNwZRsMokG87U-_L-HDNfpfc216WQqULYxqUh1SU_mvcTLqFEyky-bwtp4UC6cDPrUTK63qxOtpyhCWoIB0lhOalruqngAVCCV8vha_rtjA" />
-                        </div>
-                    </div>
-                    <!-- Column 2 -->
-                    <div class="flex flex-col gap-4 pt-12">
-                        <div class="group relative overflow-hidden rounded-lg border border-primary/10">
-                            <img alt="Modern building facade with gold accents"
-                                class="w-full h-auto object-cover aspect-[4/5]"
-                                data-alt="Sleek glass and metal facade of a luxury building"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbP7ZqOuzffZKcKSdWTVOaTynxGI7yPbJddZqET9L_Daf6ZOptOlOYehJqPX9P_65LWU2n5Mx6urmKsi8jMSnrL9rmBaNwHi7BzspO6QYjl-hzD_MIvw1hk9FRY0AqL0N8ZMA4SdQcjylgTSZn6fFGIEKujrzPNKQi6pjp3SuemkgQQtG_SmjZpoKL1sl4S04jBqy-5ZBgsWrSrH0_xezCzc8wsJQ0YCoYBretAHR4uHi1ane2Xsi_P5I2sAxgzFI6qUYlqKEVlQ" />
-                        </div>
-                        <div class="group relative overflow-hidden rounded-lg border border-primary/10">
-                            <img alt="Wide shot of a museum hallway" class="w-full h-auto object-cover aspect-[3/4]"
-                                data-alt="Perspective view of a long minimalist museum corridor"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5nm8-p15Ao8UGLW842rXMMOMnEDh4UX8OOsjx6YWFxZtFzkQrSuazHOtLhYQp93Rt4tJuiWb4_QykoS2QerZQYhuvXBfvDdsujIiqJfRfC3nSgs-PIDlAncvb8vXHlVClTApWXBUl0-8HvJBPgdU5DfQXG9co1ebT3thd9-Dj9SH6WeZoguVyySPWFuD8H734XgYMvwkeAVk2PQNyeaDJZhyeDdzeylZANKt9NQZWmvI4Q5z4zkrPfijEb1d3BzEvCMp-o8SUxw" />
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Project Details Text Section -->
-            <section class="bg-primary/5 px-6 py-16 mb-20 border-y border-primary/10">
-                <div class="max-w-md mx-auto space-y-4 text-center">
-                    <span class="material-symbols-outlined text-primary text-4xl">architecture</span>
-                    <h3 class="serif-font text-2xl dark:text-slate-100 italic">The Philosophy</h3>
-                    <p class="text-sm dark:text-slate-400 font-light leading-relaxed">
-                        Architecture is not merely about space, but the experience of existing within it. We focus on
-                        natural materials that age gracefully, developing a patina of history and character.
-                    </p>
-                </div>
-            </section>
-        </main>
-        <!-- Refined Footer -->
-        <footer class="p-8 pb-12 flex flex-col items-center gap-6 border-t border-primary/10">
-            <div class="flex gap-8">
-                <a class="text-primary text-xs tracking-widest uppercase font-bold hover:opacity-80"
-                    href="#">Instagram</a>
-                <a class="text-primary text-xs tracking-widest uppercase font-bold hover:opacity-80"
-                    href="#">Behance</a>
-                <a class="text-primary text-xs tracking-widest uppercase font-bold hover:opacity-80"
-                    href="#">LinkedIn</a>
-            </div>
-            <div class="text-center space-y-2">
-                <p class="serif-font text-xl dark:text-slate-200">Aurelius Design Studio</p>
-                <p class="text-[10px] text-slate-500 uppercase tracking-widest">© 2024 All Rights Reserved</p>
-            </div>
-            <button
-                class="mt-4 bg-primary text-background-dark px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-primary/90 transition-all">
-                Work With Us
-            </button>
-        </footer>
-    </div>
-` }} />
-  );
+import Link from 'next/link';
+
+export default function Projekt2() {
+    return (
+        <div className="min-h-screen flex flex-col items-center justify-center p-8 bg-[#f8f8f8] text-[#1a1a1a] relative">
+            <Link
+                href="/"
+                className="absolute top-8 left-8 flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-sm hover:shadow-md transition-shadow text-[#1a1a1a]"
+                aria-label="Go Back"
+            >
+                <i className="ri-arrow-left-line text-xl"></i>
+            </Link>
+            <h1 className="text-5xl font-serif mb-8 text-center">Project 2</h1>
+        </div>
+    );
 }
